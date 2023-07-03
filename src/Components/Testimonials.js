@@ -4,10 +4,8 @@ const Testimonials = () => {
   return (
     <div>
       <div class="testimonial-1 py-4 md:py-12 bg-gray-900 text-white">
-      <div className="centerh1 text-center mb-5 text-4xl">
-        Testimonials
-      </div>
-      <hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700 mx-auto block" />
+        <div className="centerh1 text-center mb-5 text-4xl">Testimonials</div>
+        <hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700 mx-auto block" />
         <div class="container mx-auto px-4">
           <div class="md:flex md:flex-wrap md:-mx-4 mb-4">
             <div class="md:w-1/2 md:px-4 mt-6 md:mt-0">

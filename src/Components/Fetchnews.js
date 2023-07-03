@@ -56,25 +56,6 @@
 
 // export default Fetchnews;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
 // // import './NewsCard.css';
@@ -113,7 +94,6 @@
 // };
 
 // export default NewsCard;
-
 
 // import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
@@ -161,81 +141,62 @@
 
 // export default NewsCard;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import React ,{useState} from 'react'
-import axios from 'axios'
+import React, { useState } from 'react';
+import axios from 'axios';
 
 function Fetchnews() {
-    const [news,setNews]=useState([])
-    const fetchnews =()=>{
-        axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=8b555c737bb04575843aadc660394238")
-        .then((response)=>{
-            //console.log(response);
-            setNews(response.data.articles)
-        })
-    }
+  const [news, setNews] = useState([]);
+  const fetchnews = () => {
+    axios
+      .get(
+        'https://newsapi.org/v2/top-headlines?country=in&apiKey=8b555c737bb04575843aadc660394238'
+      )
+      .then((response) => {
+        //console.log(response);
+        setNews(response.data.articles);
+      });
+  };
   return (
     <>
-    <div className="container my-3">
-  <div className="row ">
-    <div class="col-4">
-    <button type="button" className="btn btn-primary" onClick={fetchnews}>Fetchnews</button>
-    </div>
-    </div>
-    </div>
-    <div className="container">
-  <div className="row ">
-    {
-       news.map((value)=>{
-           return(
-<div className="col-4">
-    <div className="card" style={{width: "18rem;"}}>
-  <img src={value.urlToImage} className="card-img-top" alt="..."/>
-  <div className="card-body">
-    <h5 className="card-title">{value.title}</h5>
-    <p className="card-text">{value.description}</p>
-    <a href="/" className="btn btn-primary">Main</a>
-  </div>
-</div>
-    </div>
-           )
-       } )
-    }
-    </div>
-    </div>
+      <div className="container my-3">
+        <div className="row ">
+          <div class="col-4">
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={fetchnews}
+            >
+              Fetchnews
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row ">
+          {news.map((value) => {
+            return (
+              <div className="col-4">
+                <div className="card" style={{ width: '18rem;' }}>
+                  <img
+                    src={value.urlToImage}
+                    className="card-img-top"
+                    alt="..."
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{value.title}</h5>
+                    <p className="card-text">{value.description}</p>
+                    <a href="/" className="btn btn-primary">
+                      Main
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default Fetchnews
-
-
-
+export default Fetchnews;
