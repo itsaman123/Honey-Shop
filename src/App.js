@@ -6,14 +6,18 @@ import Footer from './Components/Footer';
 import HeroCard from './Components/HeroCard';
 import Testimonials from './Components/Testimonials';
 import ContactForm from './Components/ContactForm';
+import NewsCard from './Components/Fetchnews';
 function App() { 
   return (
     <>
+    {/* <NewsCard/> */}
+
     <Navbar />
+    
     <HeroSection />
+    <ProductCard/>
     <HeroCard/>
     <Testimonials />
-    <ProductCard/>
     <ContactForm/>
 
     <Footer />

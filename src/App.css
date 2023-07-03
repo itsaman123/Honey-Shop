@@ -5,3 +5,50 @@
 .testimonial {
   border-radius: 1rem;
 }
+
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 300px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.card-description {
+  margin-top: 0;
+  font-size: 14px;
+  color: #555;
+}
+body{
+  background-color: #111827;
+}
+#colorh1{
+  color: white;
+}
+
+#producttag{
+  margin-top:50px;  
+}

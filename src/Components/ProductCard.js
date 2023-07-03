@@ -29,14 +29,15 @@ const ProductCard = () => {
   ];
   return (
     <>
-      <div className="centerh1 text-center mt-5 mb-5 text-4xl">Products</div>
-      <hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700 mx-auto block" />
 
+      <section className="dark:bg-gray-900 text-white">
+      <div className="centerh1 text-center mb-5 text-4xl " id='producttag'>Products</div>
+      <hr class="w-64 h-1 my-9 bg-gray-200 border-0 rounded dark:bg-gray-700 mx-auto block" />
       <div className="grid gap-2 lg:grid-cols-4 ">
         {posts.map((items, key) => (
-          <div className="w-full rounded-lg shadow-md lg:max-w-sm hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300" key={key}>
+          <div className="w-full rounded-lg shadow-md lg:max-w-sm hover:border-indigo-400 hover:bg-gray-700 transition-colors duration-300" key={key}>
             <img
-              className="object-cover w-full h-48 hover:scale-110 transition-transform duration-300"
+              className="object-cover w-full h-48 hover:scale-105 transition-transform duration-300"
               src={items.img}
               alt="img"
             />
@@ -52,6 +53,7 @@ const ProductCard = () => {
           </div>
         ))}
       </div>
+      </section>
     </>
   );
 };
